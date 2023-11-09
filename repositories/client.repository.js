@@ -4,8 +4,8 @@ async function getClientsRepository() {
     const conn = await connect();
     try {
         const res = await conn.query("SELECT * FROM teste");
-        console.log("res.rows", res.rows);
-        return { ...res.rows, env: process.env.DB_HOST };
+
+        return res.rows;
     } catch (err) {
         throw err;
     } finally {
