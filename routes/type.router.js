@@ -3,6 +3,6 @@ import getTypeController from "../controllers/type.controllers.js";
 
 const routerType = express.Router();
 
-routerType.get("/", getTypeController);
+routerType.post("/", getTypeController);
 
 export default routerType;
